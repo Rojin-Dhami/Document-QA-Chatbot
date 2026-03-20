@@ -8,9 +8,11 @@ https://docs.djangoproject.com/en/6.0/howto/deployment/wsgi/
 """
 
 import os
-
+import logging
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rag_backend.settings')
+logger = logging.getLogger(__name__)
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings.dev')
 
 application = get_wsgi_application()
